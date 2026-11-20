@@ -1,0 +1,56 @@
+% oneside: Tránh tạo trang trắng thừa giữa các chương, căn lề đều nhau khi đọc PDF
+\documentclass[12pt, a4paper, oneside]{book}
+
+% --- HỖ TRỢ TIẾNG VIỆT & TOÁN HỌC ---
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\graphicspath{{images/}} % Tự động tìm ảnh trong thư mục images/
+\usepackage{float}
+
+% --- CĂN LỀ & KHOẢNG CÁCH ---
+\usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{parskip}     % Tạo khoảng trống giữa các đoạn, không thụt đầu dòng
+
+% --- TÙY CHỈNH MỤC LỤC (QUAN TRỌNG) ---
+% tocdepth = 0: Mục lục CHỈ hiển thị cấp Chương (1 dòng cho 1 chương), ẩn hết mục con
+\setcounter{tocdepth}{0} 
+\usepackage[hidelinks]{hyperref} % Bấm vào tên chương ở mục lục để nhảy thẳng tới trang đó
+
+% --- TÙY CHỈNH GẠCH ĐẦU DÒNG (-, +, •) ---
+\usepackage{enumitem}
+\setlist[itemize,1]{label={--}, leftmargin=1.5em}
+\setlist[itemize,2]{label={+}, leftmargin=1.5em}
+\setlist[itemize,3]{label={$\bullet$}, leftmargin=1.5em}
+
+% --- THÔNG TIN CUỐN SÁCH ---
+\title{\textbf{MACHINE LEARNING}}
+\author{Trịnh Minh Khánh}
+
+\begin{document}
+
+% ================= PHẦN ĐẦU SÁCH (Đánh số trang La Mã: i, ii...) =================
+\frontmatter
+\maketitle          % Trang bìa
+\tableofcontents    % Mục lục tự động (chỉ hiện tên chương + số trang)
+
+% ================= PHẦN NỘI DUNG CHÍNH (Đánh số trang từ 1, 2, 3...) =================
+\mainmatter
+\pagestyle{plain}
+
+% Mỗi tuần học xong, bạn chỉ cần thêm 1 dòng \input{...} vào bên dưới:
+\input{chapters/chap01}
+\input{chapters/chap02}
+\input{chapters/chap03}
+\input{chapters/chap04}
+\input{chapters/chap05}
+\input{chapters/chap06}
+\input{chapters/chap07}
+
+
+
+% \input{chapters/chap03}  <-- Tuần sau học thì bỏ dấu % đi
+
+\end{document}

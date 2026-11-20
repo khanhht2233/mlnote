@@ -1,0 +1,81 @@
+\chapter{Tổng quan về Machine Learning}
+
+\section{Phân loại thuật toán:}
+\begin{itemize}
+    \item \textbf{Phương thức học}
+    \item \textbf{Chức năng}
+\end{itemize}
+
+
+\section{Phương thức học (Learning Style)}
+\begin{itemize}
+    \item \textbf{Supervised Learning}
+    \item \textbf{Unsupervised Learning}
+    \item \textbf{Semi-Supervised Learning} 
+    \item \textbf{Reinforcement Learning}
+\end{itemize}
+    \subsection{Supervised Learning}
+    \begin{itemize}
+        \item Dựa trên những dữ liệu (input, outcome) đã được học từ trước để dự đoán một dữ liệu mới (new input).
+        \item Dữ liệu đã biết có dạng (data, label).
+        \item Có một tập hợp biến đầu vào X và biến đầu ra Y, các cặp $(x_i, y_i)$ là các vector (tập training data). Dựa vào tập này chúng ta cần tạo hàm ánh xạ từ X sang Y có dạng $y = f(x)$ mục đích là tìm hàm xấp xỉ $f(x)$ thật tốt để phục vụ cho việc dự đoán.
+        \item Bài toán được chia nhỏ thành 2 loại chính:
+        \begin{itemize}
+            \item Classification (Phân loại): Nếu các label của input data được chia thành một số hữu hạn nhóm.
+            \item Regression (Hồi quy) : Là bài toán dự đoán một giá trị liên tục hay số thực đầu ra cho y dựa trên một hay nhiều biến đầu vào X.
+        \end{itemize}
+    \end{itemize}
+    \subsection{Unsupervised Learning}
+    \begin{itemize}
+        \item Thuật toán chỉ được nhận Input
+        \item Dựa vào cấu trúc dữ liệu để thực hiện một số công việc.
+        \item Bài toán được chia thành 2 loại:
+        \begin{itemize}
+            \item Clustering (Phân nhóm):  Phân nhóm toàn bộ dữ liệu thành các nhóm nhỏ dựa trên sự liên quan giữa các dữ liệu trong mỗi nhóm. vd : đối với dữ liệu của khách hàng mua hàng thì có thể có những nhóm sau:
+            \begin{itemize}
+                \item Cụm chi tiêu cao.
+                \item Cụm mua món ăn kèm.
+                \item Cụm những người thích mua hàng sale.
+            \end{itemize}
+            \item Association: Bài toán tìm ra quy luật trên nhiều dữ liệu cho trước.
+         \end{itemize}
+    \end{itemize}
+    \subsection{Semi-supervised Learning(Học bán giám sát)}
+    \begin{itemize}
+        \item Chỉ một phần dữ liệu được gán nhãn.
+    \end{itemize}
+    \subsection{Reinforcement Learning(Học củng cố)}
+    \begin{itemize}
+        \item Là bài toán giúp cho một hệ thống tự động xác định hành vi dựa trên hoàn cảnh để đạt lợi ích cao nhất.
+        \item Bài toán huấn luyện tác nhân để tác nhân tương tác nhận phản hồi từ môi trường, định nghĩa phản hồi mà môi trường sẽ trả lại cho tác nhân.
+Chủ yếu áp dụng vào : Game Theory, Thuật toán cần xác định nước đi tiếp theo để đạt điểm cao nhất
+        \item Chủ yếu áp dụng vào : Game Theory, Thuật toán cần xác định nước đi tiếp theo để đạt điểm cao nhất.
+        \item Ví dụ áp dụng cái này vào việc huấn luyện xe tự hành: 
+        \begin{itemize}
+            \item Cho vào môi trường mô phỏng và đặt thêm 1 biến, biến này có vai trò cứ làm đúng chuẩn thì sẽ được cộng vào (phần thưởng), còn nếu sai thì phải trừ.
+            \item Trong lúc cộng trừ thì phụ thuộc vào hành động nó thực hiện, ví dụ như đi xe lên vỉa hè thì trừ điểm nhưng ít hơn khi xe va chạm (tông xe, tông người, …), lúc va chạm người thì phải trừ đi rất nhiều để thể hiện rõ đây là một hành vi rất nghiêm trọng,.. điều này cũng tương tự trong khi làm đúng.
+        \end{itemize}
+    \end{itemize}
+\section{Chức năng (Function)}
+\begin{itemize}
+    \item Regression Algorithms:
+    \begin{itemize}
+        \item Linear Regression
+        \item Logistic Regression
+        \item Stepwise Regression
+    \end{itemize}
+    \item Classification Regression:
+    \begin{itemize}
+        \item Linear Clasifier
+        \item Support Vector Machine
+        \item Sparse Representation-based classification (SRC)
+    \end{itemize}
+    \item Clustering Algorithms:
+    \begin{itemize}
+        \item K-means Clustering
+        \item K-meidans
+        \item Expectation Maximization (EM)
+    \end{itemize}
+\end{itemize}
+
+
